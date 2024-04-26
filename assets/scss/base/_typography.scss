@@ -1,7 +1,12 @@
 // font-size
-$fz-xs: .75rem; // =12px
-$fz-sm: .875rem; // =14px
+$fz-xs: 0.75rem; // =12px
+$fz-sm: 0.875rem; // =14px
 $fz-md: 1rem; // =16px
 $fz-lg: 1.125rem; // =18px
 $fz-xl: 1.25rem; // =20px
 $fz-2xl: 2rem; // =32px
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+body {
+    font-family: "Roboto", sans-serif;
+}
