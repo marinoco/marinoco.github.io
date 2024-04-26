@@ -1,0 +1,16 @@
+// how to use
+// @include XXX.respond(tablet) {}
+
+@mixin respond($breakpoint) {
+    @if $breakpoint==tablet {
+        @media only screen and (max-width: 768px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint==sp {
+        @media only screen and (max-width: 480px) {
+            @content;
+        }
+    }
+}
