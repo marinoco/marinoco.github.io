@@ -1,7 +1,11 @@
 // 基本色
 :root {
-    --color-theme: #ff7518;
-    --color-theme-rgb: 255, 117, 24;
+    --theme-color: #ff7518;
+    --theme-color-rgb: 255, 117, 24;
+    --white: #f4f3f3;
+    --white-rgb: 244, 243, 243;
+    --black: #312828;
+    --black-rgb: 49, 40, 40;
 
     @media (prefers-color-scheme: light) {
         --high-emphasis: #1a1010;
@@ -14,16 +18,18 @@
         --disable-rgb: 209, 207, 207;
         --border: #5f5857;
         --border-rgb: 95, 88, 87;
-        --accent-primary: var(--color-theme);
-        --accent-primary-rgb: var(--color-theme-rgb);
+        --accent-primary: var(--theme-color);
+        --accent-primary-rgb: var(--theme-color-rgb);
         --accent-secondary: #007775;
         --accent-secondary-rgb: 0, 119, 117;
         --caution: #cf1137;
         --caution-rgb: 207, 17, 55;
         --foucus: #0c6dad;
         --foucus-rgb: 12, 109, 173;
-        --background: #f4f3f3;
-        --background-rgb: 244, 243, 243;
+        --background: var(--white);
+        --background-rgb: var(--white-rgb);
+        --background-reverse: var(--black);
+        --background-reverse-rgb: var(--black-rgb);
         --surface-primary: #fdfdfd;
         --surface-primary-rgb: 253, 253, 253;
         --surface-secondary: #f4f3f3;
@@ -50,8 +56,10 @@
         --caution-rgb: 252, 103, 117;
         --foucus: #0c6dad;
         --foucus-rgb: 12, 109, 173;
-        --background: #312828;
-        --background-rgb: 49, 40, 40;
+        --background: var(--black);
+        --background-rgb: var(--black-rgb);
+        --background-reverse: var(--white);
+        --background-reverse-rgb: var(--white-rgb);
         --surface-primary: #1a1010;
         --surface-primary-rgb: 26, 16, 16;
         --surface-secondary: #453d3d;
@@ -61,7 +69,14 @@
     }
 }
 
-$high-emphasis: var(high-emphasis);
+$theme-color: var(--theme-color);
+$theme-color-rgb: var(--theme-color-rgb);
+$white: var(--white);
+$white-rgb: var(--white-rgb);
+$black: var(--black);
+$black-rgb: var(--black-rgb);
+
+$high-emphasis: var(--high-emphasis);
 $high-emphasis-rgb: car(--high-emphasis-rgb);
 $mid-emphasis: var(--mid-emphasis);
 $mid-emphasis-rgb: var(--mid-emphasis-rgb);
@@ -71,6 +86,7 @@ $disable: var(--disable);
 $disable-rgb: var(--disable-rgb);
 $border: var(--border);
 $border-rgb: var(--border-rgb);
+
 $accent-primary: var(--accent-primary);
 $accent-primary-rgb: var(--color-theme-rgb);
 $accent-secondary: var(--accent-secondary);
@@ -79,8 +95,11 @@ $caution: var(--caution);
 $caution-rgb: var(--caution-rgb);
 $foucus: var(--foucus);
 $foucus-rgb: var(--foucus-rgb);
+
 $background: var(--background);
 $background-rgb: var(--background-rgb);
+$background-reverse: var(--background-reverse);
+$background-reverse-rgb: var(--background-reverse-rgb);
 $surface-primary: var(--surface-primary);
 $surface-primary-rgb: var(--surface-primary-rgb);
 $surface-secondary: var(--surface-secondary);

@@ -39,13 +39,15 @@
         <meta name="twitter:image:alt" content="Main visual of MarinoCo." />
         <meta name="twitter:image" content="./assets/common/ogp.png" />
         <meta name="twitter:image:alt" content="Main visual of MarinoCo." />
+
+        <script src="./assets/js/script.js" defer></script>
     </head>
     <body>
         <aside class="sidebar">
             <header>
                 <div class="logo-icon">
                     <div class="logo-icon__item">
-                        <img src="./assets/images/brand/icon-m.svg" alt="M" class="logo-icon__image" />
+                        <img src="./assets/images/brand/brand-icon.svg" alt="M" class="logo-icon__image" />
                     </div>
                 </div>
                 <div class="profile">
@@ -56,9 +58,9 @@
                     </div>
                 </div>
             </header>
-            <div class="sidebar-content">
+            <div class="sidebar__item">
                 <section class="section section--secondary">
-                    <h2 class="section__title title">
+                    <h2 class="section__title title" data-icon="false">
                         <span class="title__item">title</span>
                     </h2>
                     <div class="section__body">
@@ -72,7 +74,7 @@
                     </div>
                 </section>
                 <section class="section section--secondary">
-                    <h2 class="section__title title">
+                    <h2 class="section__title title" data-icon="false">
                         <span class="title__item">title</span>
                     </h2>
                     <div class="section__body">
@@ -89,17 +91,17 @@
         </aside>
 
         <div class="hero">
-            <picture>
+            <picture class="hero__image">
                 <source media="(min-width: 768px)" type="image/webp" srcset="./assets/images/hero.webp" />
                 <source media="(max-width: 767px)" type="image/webp" srcset="./assets/images/hero-sp.webp" />
                 <source media="(min-width: 768px)" type="image/png" srcset="./assets/images/hero.jpg" />
                 <source media="(max-width: 767px)" type="image/png" srcset="./assets/images/hero-sp.jpg" />
                 <img src="./assets/images/hero.jpg" alt="Hero image" />
             </picture>
-            <h1><img src="./assets/images/brand/logo-marinoco.svg" alt="MarinoCo" class="logo" /></h1>
+            <h1 class="hero__logo"><img src="./assets/images/brand/brand-logo.svg" alt="MarinoCo" class="logo" /></h1>
         </div>
 
-        <main>
+        <main class="main">
             <section class="section">
                 <h2 class="section__title title" data-icon="true" data-img="marinoco">
                     <span class="title__item">title</span>
@@ -109,7 +111,7 @@
                 </div>
             </section>
             <section class="section">
-                <h2 class="section__title title" data-icon="true" data-img="marinoco">
+                <h2 class="section__title title" data-icon="true" data-img="design">
                     <span class="title__item">title</span>
                 </h2>
                 <div class="section__body">
