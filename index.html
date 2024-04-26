@@ -1,23 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Portfolio website of Marino.H, a web designer showcasing UI and UX design, and markup projects." />
+        <meta name="keywords" content="web designer, portfolio, UI, UX, design, markup" />
+        <meta name="author" content="Marino.H" />
+        <title>Marino.H | MarinoCo</title>
 
-  <meta name="description" content="xxx">
-  <meta property="og:title" content="xxx">
-  <meta property="og:description" content="xxx">
-  <meta property="og:site_name" content="xxx">
-  <meta property="og:url" content="xxx">
-  <meta property="og:image" content="xxx.jpg">
-  <meta property="og:type" content="website"> <!-- top: website, else: article  -->
-  <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" type="image/svg+xml" href="xxx.svg">
-  <link rel="apple-touch-icon" href="xxx.png" sizes="180x180">
-</head>
-<body>
-  
-</body>
+        <link rel="icon" type="image/svg+xml" href="./assets/favicon/favicon.svg" />
+        <link rel="icon" type="image/png" href="./assets/favicon/favicon-16x16.png" sizes="16x16" />
+        <link rel="icon" type="image/png" href="./assets/favicon/favicon-32x32.png" sizes="32x32" />
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
+
+        <link rel="stylesheet" href="./assets/css/style.min.css" />
+        <link rel="canonical" href="https://marinoco.net/" />
+
+        <meta property="og:title" content="Marino.H | Web Designer Portfolio" />
+        <meta property="og:description" content="Portfolio website of Marino.H, a web designer showcasing UI and UX design, and markup projects." />
+        <meta property="og:image" content="./assets/common/ogp.webp" />
+        <meta property="og:image:type" content="image/webp" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Main visual of MarinoCo." />
+        <meta property="og:image" content="./assets/common/ogp.png" />
+        <meta property="og:image:type" content="image/png" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="og:image:alt" content="Main visual of MarinoCo." />
+        <meta property="og:url" content="https://marinoco.net/" />
+        <meta property="og:site_name" content="Marino.H Portfolio" />
+        <meta property="og:type" content="website" />
+        <meta property="og:locale" content="en-US" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Marino.H | Web Designer Portfolio" />
+        <meta name="twitter:description" content="Portfolio website of Marino.H, a web designer showcasing UI and UX design, and markup projects." />
+        <meta name="twitter:image" content="./assets/common/ogp.webp" />
+        <meta name="twitter:image:alt" content="Main visual of MarinoCo." />
+        <meta name="twitter:image" content="./assets/common/ogp.png" />
+        <meta name="twitter:image:alt" content="Main visual of MarinoCo." />
+    </head>
+    <body>
+        <aside class="sidebar">
+            <header>
+                <div class="logo-icon">
+                    <div class="logo-icon__item">
+                        <img src="./assets/images/common/icon-m.svg" alt="M" class="logo-icon__image" />
+                    </div>
+                </div>
+                <div class="profile">
+                    <div class="profile__name">Marino.H</div>
+                    <div class="profile__job-title">
+                        <span>WEB designer</span>
+                        <span>Markup Engineer</span>
+                    </div>
+                </div>
+            </header>
+            <div class="sidebar-content">
+                <section class="section section--secondary">
+                    <h2 class="section__title title">
+                        <span class="title__item">title</span>
+                    </h2>
+                    <div class="section__body">
+                        <ul class="list">
+                            <li class="list__item">
+                                <div class="icon-text" data-icon="pin">
+                                    <span class="icon-text__item"> Tokyo, Jp</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="section section--secondary">
+                    <h2 class="section__title title">
+                        <span class="title__item">title</span>
+                    </h2>
+                    <div class="section__body">
+                        <ul class="list">
+                            <li class="list__item">
+                                <div class="icon-text" data-icon="pin">
+                                    <span class="icon-text__item"> Tokyo, Jp</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </aside>
+
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 768px)" type="image/webp" srcset="./assets/images/hero.webp" />
+                <source media="(max-width: 767px)" type="image/webp" srcset="./assets/images/hero-sp.webp" />
+                <source media="(min-width: 768px)" type="image/png" srcset="./assets/images/hero.jpg" />
+                <source media="(max-width: 767px)" type="image/png" srcset="./assets/images/hero-sp.jpg" />
+                <img src="./assets/images/hero.jpg" alt="Hero image" />
+            </picture>
+            <h1><img src="./assets/images/common/logo-marinoco.svg" alt="MarinoCo" class="logo" /></h1>
+        </div>
+
+        <main>
+            <section class="section">
+                <h2 class="section__title title" data-icon="true" data-img="marinoco">
+                    <span class="title__item">title</span>
+                </h2>
+                <div class="section__body">
+                    <div class="section__copy">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                </div>
+            </section>
+            <section class="section">
+                <h2 class="section__title title" data-icon="true" data-img="marinoco">
+                    <span class="title__item">title</span>
+                </h2>
+                <div class="section__body">
+                    <div class="timeline">
+                        <div class="timeline__item">
+                            <div class="timeline__header">
+                                <div class="timeline__title">title</div>
+                                <div class="timeline__year">year</div>
+                                <div class="low-emphasis">low emphasis</div>
+                            </div>
+                            <div class="timeline__body">
+                                <div class="timeline__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section">
+                <h2 class="section__title title" data-icon="true" data-img="marinoco">
+                    <span class="title__item">title</span>
+                </h2>
+                <div class="section__body">
+                    <div class="gallery">
+                        <div class="gallery__item">
+                            <img src="https://placehold.jp/608x342.png" alt="Project image" class="gallery__image" />
+                            <div class="gallery__caption">Lorem ipsum dolor sit amet</div>
+                        </div>
+                        <div class="gallery__item">
+                            <img src="https://placehold.jp/608x342.png" alt="Project image" class="gallery__image" />
+                            <div class="gallery__caption">Lorem ipsum dolor sit amet</div>
+                        </div>
+                        <div class="gallery__item">
+                            <img src="https://placehold.jp/608x342.png" alt="Project image" class="gallery__image" />
+                            <div class="gallery__caption">Lorem ipsum dolor sit amet</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>

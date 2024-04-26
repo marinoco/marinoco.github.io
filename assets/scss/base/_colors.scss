@@ -1,66 +1,64 @@
-
-
 // 基本色
 :root {
-  --color-theme: #ff7518;
-  --color-theme-rgb: 255, 117, 24;
+    --color-theme: #ff7518;
+    --color-theme-rgb: 255, 117, 24;
 
-  @media (prefers-color-scheme: light) {
-    --high-emphasis: #1a1010;
-    --high-emphasis-rgb: 26, 16, 16;
-    --mid-emphasis: #48403f;
-    --mid-emphasis-rgb: 72, 64, 63;
-    --low-emphasis: #76706f;
-    --low-emphasis-rgb: 118, 112, 111;
-    --disable: #d1cfcf;
-    --disable-rgb: 209, 207, 207;
-    --border: #5f5857;
-    --border-rgb: 95, 88, 87;
-    --accent-primary: var(--color-theme);
-    --accent-primary-rgb: var(--color-theme-rgb);
-    --accent-secondary: #007775;
-    --accent-secondary-rgb: 0, 119, 117;
-    --caution: #cf1137;
-    --caution-rgb: 207, 17, 55;
-    --foucus: #0c6dad;
-    --foucus-rgb: 12, 109, 173;
-    --background: #f4f3f3;
-    --background-rgb: 244, 243, 243;
-    --surface-primary: #fdfdfd;
-    --surface-primary-rgb: 253, 253, 253;
-    --surface-secondary: #f4f3f3;
-    --surface-secondary-rgb: 244, 243, 243;
-    --surface-tertiary: #e8e7e7;
-    --surface-tertiary-rgb: 232, 231, 231;
-  }
-  @media (prefers-color-scheme: dark) {
-    --high-emphasis: #f4f3f3;
-    --high-emphasis-rgb: 244, 243, 243;
-    --mid-emphasis: #d1cfcf;
-    --mid-emphasis-rgb: 209, 207, 207;
-    --low-emphasis: #bab7b7;
-    --low-emphasis-rgb: 186, 183, 183;
-    --disable: #5f5857;
-    --disable-rgb: 95, 88, 87;
-    --border: #d1cfcf;
-    --border-rgb: 209, 207, 207;
-    --accent-primary: var(--color-theme);
-    --accent-primary-rgb: var(--color-theme-rgb);
-    --accent-secondary: #79c0c2;
-    --accent-secondary-rgb: 121, 192, 194;
-    --caution: #fc6775;
-    --caution-rgb: 252, 103, 117;
-    --foucus: #0c6dad;
-    --foucus-rgb: 12, 109, 173;
-    --background: #312828;
-    --background-rgb: 49, 40, 40;
-    --surface-primary: #1a1010;
-    --surface-primary-rgb: 26, 16, 16;
-    --surface-secondary: #453d3d;
-    --surface-secondary-rgb: 69, 61, 61;
-    --surface-tertiary: #5a5353;
-    --surface-tertiary-rgb: 90, 83, 83;
-  }
+    @media (prefers-color-scheme: light) {
+        --high-emphasis: #1a1010;
+        --high-emphasis-rgb: 26, 16, 16;
+        --mid-emphasis: #48403f;
+        --mid-emphasis-rgb: 72, 64, 63;
+        --low-emphasis: #76706f;
+        --low-emphasis-rgb: 118, 112, 111;
+        --disable: #d1cfcf;
+        --disable-rgb: 209, 207, 207;
+        --border: #5f5857;
+        --border-rgb: 95, 88, 87;
+        --accent-primary: var(--color-theme);
+        --accent-primary-rgb: var(--color-theme-rgb);
+        --accent-secondary: #007775;
+        --accent-secondary-rgb: 0, 119, 117;
+        --caution: #cf1137;
+        --caution-rgb: 207, 17, 55;
+        --foucus: #0c6dad;
+        --foucus-rgb: 12, 109, 173;
+        --background: #f4f3f3;
+        --background-rgb: 244, 243, 243;
+        --surface-primary: #fdfdfd;
+        --surface-primary-rgb: 253, 253, 253;
+        --surface-secondary: #f4f3f3;
+        --surface-secondary-rgb: 244, 243, 243;
+        --surface-tertiary: #e8e7e7;
+        --surface-tertiary-rgb: 232, 231, 231;
+    }
+    @media (prefers-color-scheme: dark) {
+        --high-emphasis: #f4f3f3;
+        --high-emphasis-rgb: 244, 243, 243;
+        --mid-emphasis: #d1cfcf;
+        --mid-emphasis-rgb: 209, 207, 207;
+        --low-emphasis: #bab7b7;
+        --low-emphasis-rgb: 186, 183, 183;
+        --disable: #5f5857;
+        --disable-rgb: 95, 88, 87;
+        --border: #d1cfcf;
+        --border-rgb: 209, 207, 207;
+        --accent-primary: var(--color-theme);
+        --accent-primary-rgb: var(--color-theme-rgb);
+        --accent-secondary: #79c0c2;
+        --accent-secondary-rgb: 121, 192, 194;
+        --caution: #fc6775;
+        --caution-rgb: 252, 103, 117;
+        --foucus: #0c6dad;
+        --foucus-rgb: 12, 109, 173;
+        --background: #312828;
+        --background-rgb: 49, 40, 40;
+        --surface-primary: #1a1010;
+        --surface-primary-rgb: 26, 16, 16;
+        --surface-secondary: #453d3d;
+        --surface-secondary-rgb: 69, 61, 61;
+        --surface-tertiary: #5a5353;
+        --surface-tertiary-rgb: 90, 83, 83;
+    }
 }
 
 $high-emphasis: var(high-emphasis);
