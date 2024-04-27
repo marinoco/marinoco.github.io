@@ -10,6 +10,13 @@
         list-style: square;
         margin-left: var.$space-md;
     }
+    &--skills {
+        max-width: 360px;
+        .list__item {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
 }
 strong + .list {
     margin-top: var.$space-xs;

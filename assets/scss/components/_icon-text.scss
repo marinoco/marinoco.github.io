@@ -5,10 +5,18 @@
 .icon-text {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    width: 100%;
     &__item {
+        flex-grow: 1;
         margin-left: var.$space-sm;
     }
+    &__side {
+        text-transform: uppercase;
+        font-size: var.$fz-sm;
+    }
     &::before {
+        flex-shrink: 1;
         content: "";
         display: block;
         background-color: clr.$dark-low-emphasis;
@@ -54,6 +62,30 @@
     &[data-img="museum"] {
         &::before {
             mask: url("../images/icons/museum.svg") no-repeat center;
+            mask-size: var.$icon-md;
+        }
+    }
+    &[data-img="direction"] {
+        &::before {
+            mask: url("../images/icons/design.svg") no-repeat center;
+            mask-size: var.$icon-md;
+        }
+    }
+    &[data-img="design"] {
+        &::before {
+            mask: url("../images/icons/palette.svg") no-repeat center;
+            mask-size: var.$icon-md;
+        }
+    }
+    &[data-img="markup"] {
+        &::before {
+            mask: url("../images/icons/code.svg") no-repeat center;
+            mask-size: var.$icon-md;
+        }
+    }
+    &[data-img="lang"] {
+        &::before {
+            mask: url("../images/icons/translate.svg") no-repeat center;
             mask-size: var.$icon-md;
         }
     }

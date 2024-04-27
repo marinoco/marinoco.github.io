@@ -98,6 +98,14 @@ body {
             }
         }
     }
+    &[data-img="skill"] {
+        & .title__icon {
+            &::before {
+                mask: url("../images/icons/design.svg") no-repeat center;
+                mask-size: var.$icon-title-mask;
+            }
+        }
+    }
     &[data-img="design"] {
         & .title__icon {
             &::before {
