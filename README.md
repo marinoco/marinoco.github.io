@@ -17,6 +17,10 @@ This is the portfolio website of Marino.H, a web designer based in Tokyo, showca
 - Web Fonts (Google Fonts)
 
 
+## Contributing
+Contributions are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+
+
 ## License
 This project is licensed under the MIT License.
 
