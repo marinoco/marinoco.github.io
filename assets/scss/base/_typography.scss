@@ -49,6 +49,7 @@ body {
             font-size: var.$fz-2xl;
             font-weight: 900;
             line-height: var.$icon-title;
+            letter-spacing: 0.1rem;
             border-left: solid 4px clr.$background-reverse;
             padding-left: var.$space-md;
             &::before {
@@ -100,7 +101,7 @@ body {
     &[data-img="design"] {
         & .title__icon {
             &::before {
-                mask: url("../images/icons/design.svg") no-repeat center;
+                mask: url("../images/icons/draw.svg") no-repeat center;
                 mask-size: var.$icon-title-mask;
             }
         }

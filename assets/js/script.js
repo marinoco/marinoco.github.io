@@ -1,3 +1,11 @@
+// year
+function updateCopyright() {
+    const yearSpan = document.getElementById("year");
+    const currentYear = new Date().getFullYear();
+    yearSpan.textContent = currentYear;
+}
+window.onload = updateCopyright;
+
 // title
 document.addEventListener("DOMContentLoaded", function () {
     const titles = document.querySelectorAll('.title[data-icon="true"]');
@@ -40,17 +48,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const sidebarItem = document.querySelector(".aside-section");
     const main = document.querySelector(".main");
 
-    let isSmallScreen = window.innerWidth <= 768;
-
     function handleResize() {
-        const currentIsSmallScreen = window.innerWidth <= 768;
+        const isSmallScreen = window.innerWidth <= 768;
 
-        if (currentIsSmallScreen !== isSmallScreen) {
-            isSmallScreen = currentIsSmallScreen;
-
-            if (isSmallScreen) {
+        if (isSmallScreen) {
+            if (sidebarItem.parentNode !== main) {
                 main.appendChild(sidebarItem);
-            } else {
+            }
+        } else {
+            if (sidebarItem.parentNode !== sidebar) {
                 sidebar.appendChild(sidebarItem);
             }
         }

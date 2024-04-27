@@ -1,0 +1,21 @@
+@use "../base/colors" as clr;
+@use "../base/mixins" as mixins;
+@use "../base/variables" as var;
+
+.footer {
+    min-width: 424px;
+    padding: var.$space-xs 0;
+    padding-left: var.$space-xl;
+    padding-right: calc(var.$sidebar + (var.$space-xl * 2));
+    margin-top: var.$space-3xl;
+    @include mixins.respond(tablet) {
+        min-width: inherit;
+        width: 100%;
+        padding: var.$space-xs var.$space-md;
+    }
+}
+.copylight {
+    color: clr.$low-emphasis;
+    font-size: var.$fz-sm;
+    text-align: center;
+}

@@ -10,6 +10,7 @@ $fz-3xl: 2.375rem; // =32px
 // icon
 $icon-title: 48px;
 $icon-title-mask: 28px;
+$icon-md: 16px;
 
 // for margin/padding
 $space-2xs: 4px;
@@ -20,5 +21,15 @@ $space-lg: 20px;
 $space-xl: 32px;
 $space-2xl: 40px;
 $space-3xl: 48px;
-$space-section: 80px;
+$space-section: 100px;
 $space-section-sp: 60px;
+$space-section-body: 84px;
+$space-section-body-negative: -84px;
+
+// 速度
+$speed-fast: 0.2s;
+$speed-normal: 0.5s;
+$speed-slow: 0.7s;
+
+// sidebar
+$sidebar: 300px;
