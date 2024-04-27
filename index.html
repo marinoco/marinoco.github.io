@@ -13,7 +13,7 @@
         <link rel="icon" type="image/png" href="./assets/favicon/favicon-32x32.png" sizes="32x32" />
         <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png" />
 
-        <link rel="stylesheet" href="./assets/css/style.min.css" />
+        <link rel="stylesheet" href="./assets/css/style.min.css" rel="preload" />
         <link rel="canonical" href="https://marinoco.net/" />
 
         <meta property="og:title" content="Marino.H | Web Designer Portfolio" />
@@ -40,7 +40,8 @@
         <meta name="twitter:image" content="./assets/common/ogp.png" />
         <meta name="twitter:image:alt" content="Main visual of MarinoCo." />
 
-        <script src="./assets/js/script.js" defer></script>
+        <script src="./assets/js/preload.min.js" defer></script>
+        <script src="./assets/js/script.min.js" defer></script>
     </head>
     <body>
         <aside class="sidebar">
@@ -128,7 +129,7 @@
 
         <div class="hero">
             <div class="hero__image">
-                <img data-image="hero" src="" alt="Hero image" />
+                <img data-src="hero" alt="Hero image" />
             </div>
             <h1 class="hero__logo" data-svg="brand/brand-logo"></h1>
         </div>
@@ -254,7 +255,7 @@
                         <div class="gallery__item">
                             <a href="https://www.cri-mw.co.jp/" target="_blank" title="CRI middleware" rel="noopener noreferrer" class="gallery__link">
                                 <div class="gallery__image">
-                                    <img data-image="works/cri-mw" src="" alt="CRI middleware" />
+                                    <img data-src="works/cri-mw" alt="CRI middleware" loading="lazy" />
                                 </div>
                                 <div class="gallery__caption">Website redesign</div>
                                 <div class="gallery__category">
@@ -267,7 +268,7 @@
                         <div class="gallery__item">
                             <a href="https://ninnaji.jp/" target="_blank" title="Ninnaji" rel="noopener noreferrer" class="gallery__link">
                                 <div class="gallery__image">
-                                    <img data-image="works/ninnaji" src="" alt="Ninnaji" />
+                                    <img data-src="works/ninnaji" alt="Ninnaji" loading="lazy" />
                                 </div>
                                 <div class="gallery__caption">Website redesign</div>
                                 <div class="gallery__category">
@@ -280,7 +281,7 @@
                         <div class="gallery__item">
                             <a href="https://ninnaji.jp/en/" target="_blank" title="Ninnaji English" rel="noopener noreferrer" class="gallery__link">
                                 <div class="gallery__image">
-                                    <img data-image="works/ninnaji-en" src="" alt="Ninnaji English" />
+                                    <img data-src="works/ninnaji-en" alt="Ninnaji English" loading="lazy" />
                                 </div>
                                 <div class="gallery__caption">Website redesign</div>
                                 <div class="gallery__category">
@@ -293,7 +294,7 @@
                         <div class="gallery__item">
                             <a href="./assets/images/works/neko-nook.jpg" target="_blank" title="Neko Nook" rel="noopener noreferrer" class="gallery__link">
                                 <div class="gallery__image">
-                                    <img data-image="works/neko-nook" src="" alt="Neko Nook" />
+                                    <img data-src="works/neko-nook" alt="Neko Nook" loading="lazy" />
                                     <p class="gallery__notice">Under development</p>
                                 </div>
                                 <div class="gallery__caption">Character design: PJ Neko Nook</div>
@@ -305,7 +306,7 @@
                         <div class="gallery__item">
                             <a href="./assets/images/works/post-card.jpg" target="_blank" title="Post card" rel="noopener noreferrer" class="gallery__link">
                                 <div class="gallery__image">
-                                    <img data-image="works/post-card" src="" alt="Post card" />
+                                    <img data-src="works/post-card" alt="Post card" loading="lazy" />
                                 </div>
                                 <div class="gallery__caption">Postcard design</div>
                                 <div class="gallery__category">
@@ -316,7 +317,7 @@
                         <div class="gallery__item">
                             <a href="./assets/images/works/personal.jpg" target="_blank" title="Personal illustration work" rel="noopener noreferrer" class="gallery__link">
                                 <div class="gallery__image">
-                                    <img data-image="works/personal" src="" alt="Personal illustration work" />
+                                    <img data-src="works/personal" alt="Personal illustration work" loading="lazy" />
                                 </div>
                                 <div class="gallery__caption">Personal illustration work</div>
                                 <div class="gallery__category">

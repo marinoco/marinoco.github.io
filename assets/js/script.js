@@ -46,16 +46,17 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const webpSupported = document.createElement("canvas").toDataURL("image/webp").indexOf("data:image/webp") === 0;
     const windowWidth = window.innerWidth;
-    const images = document.querySelectorAll("[data-image]");
+    const images = document.querySelectorAll("[data-src]");
     const basePath = "../assets/images/";
     const imgExtensions = [".jpg", ".png"];
 
     function setImageSrc(img, imageName, suffix, extension) {
         img.src = `${basePath}${imageName}${suffix}${extension}`;
+        img.removeAttribute("data-src");
     }
 
     images.forEach(function (img) {
-        const imageName = img.dataset.image;
+        const imageName = img.dataset.src;
         const suffix = windowWidth <= 767 ? "-sp" : "";
 
         if (webpSupported) {
