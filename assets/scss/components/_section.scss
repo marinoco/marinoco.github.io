@@ -1,0 +1,33 @@
+@use "../base/colors" as clr;
+@use "../base/variables" as var;
+@use "../base/mixins" as mixins;
+
+.section {
+    display: flex;
+    flex-direction: column;
+    gap: var.$space-xl;
+    &__body {
+        padding-left: var.$space-section-body;
+        display: flex;
+        flex-direction: column;
+        gap: var.$space-xs;
+    }
+    &--secondary {
+        & .section__body {
+            padding-left: 24px;
+        }
+    }
+}
+
+.aside-section {
+    display: flex;
+    flex-direction: column;
+    gap: var.$space-3xl;
+    @include mixins.respond(tablet) {
+        color: clr.$dark-mid-emphasis;
+        background-color: rgba(clr.$black-rgb, 0.9);
+        margin-left: var.$space-md-negativ;
+        margin-right: var.$space-md-negativ;
+        padding: var.$space-xl var.$space-md;
+    }
+}

@@ -1,0 +1,23 @@
+@use "../base/variables" as var;
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var.$space-md;
+    &[data-list="dot"] {
+        gap: var.$space-xs;
+        list-style: square;
+        margin-left: var.$space-md;
+    }
+    &--skills {
+        max-width: 360px;
+        .list__item {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+strong + .list {
+    margin-top: var.$space-xs;
+}

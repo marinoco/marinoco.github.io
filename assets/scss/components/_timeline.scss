@@ -1,0 +1,62 @@
+@use "../base/colors" as clr;
+@use "../base/mixins" as mixins;
+@use "../base/variables" as var;
+
+.timeline {
+    position: relative;
+    margin-left: var.$space-section-body-negative;
+    &::after {
+        content: "";
+        position: absolute;
+        width: 4px;
+        background-color: clr.$background-reverse;
+        top: 0;
+        bottom: 0;
+        left: 22px;
+    }
+}
+
+.timeline__item {
+    padding: var.$space-xl 0 var.$space-xl var.$space-section-body;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var.$space-md;
+    ::before {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 16px;
+        background-color: clr.$background;
+        border: 4px solid clr.$background-reverse;
+        top: 38px;
+        left: 16px;
+        border-radius: 16px;
+        z-index: 1;
+    }
+}
+.timeline__header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.timeline__title {
+    font-size: var.$fz-lg;
+    font-weight: 500;
+}
+.timeline__year {
+    font-size: var.$fz-lg;
+}
+.timeline__caption {
+    color: clr.$low-emphasis;
+    width: 100%;
+}
+.timeline__body {
+    display: flex;
+    flex-direction: column;
+    gap: var.$space-sm;
+    & strong {
+        display: block;
+        font-weight: 500;
+    }
+}

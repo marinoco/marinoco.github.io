@@ -1,0 +1,50 @@
+@use "../base/colors" as clr;
+@use "../base/mixins" as mixins;
+@use "../base/variables" as var;
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    @include mixins.respond(tablet) {
+        justify-content: center;
+        gap: 0;
+    }
+}
+.logo-icon {
+    &__item {
+        border-radius: 180px;
+        width: 180px;
+        height: 180px;
+        background-color: clr.$background;
+        & .icon-path {
+            fill: clr.$theme-color;
+        }
+    }
+    @include mixins.respond(tablet) {
+        &__item {
+            border-radius: 6px;
+            width: 32px;
+            height: 32px;
+        }
+    }
+}
+.profile {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 0.1rem;
+    &__name {
+        color: clr.$dark-high-emphasis;
+        font-size: var.$fz-3xl;
+    }
+    &__job-title {
+        color: clr.$dark-low-emphasis;
+        font-size: var.$fz-xl;
+        line-height: var.$fz-xl;
+    }
+    @include mixins.respond(tablet) {
+        display: none;
+    }
+}
