@@ -80,10 +80,10 @@
                                         target="_blank"
                                         title="View my LinkedIn profile"
                                         rel="noopener noreferrer"
-                                        class="socialmedia__link"
                                         data-svg="icons/linkedin"
+                                        class="socialmedia__link"
                                     ></a>
-                                    <a href="https://github.com/marinoco" class="socialmedia__link" target="_blank" title="View my GitHub" rel="noopener noreferrer" data-svg="icons/github"></a>
+                                    <a href="https://github.com/marinoco" target="_blank" title="View my GitHub" rel="noopener noreferrer" data-svg="icons/github" class="socialmedia__link"></a>
                                 </div>
                             </li>
                         </ul>
@@ -117,7 +117,7 @@
                             </li>
                             <li class="list__item">
                                 <div class="icon-text" data-img="museum">
-                                    <span class="icon-text__item">Museums, and fossils</span>
+                                    <span class="icon-text__item">Museums and fossils</span>
                                 </div>
                             </li>
                         </ul>
@@ -127,13 +127,9 @@
         </aside>
 
         <div class="hero">
-            <picture class="hero__image">
-                <source media="(min-width: 768px)" type="image/webp" srcset="./assets/images/hero.webp" />
-                <source media="(max-width: 767px)" type="image/webp" srcset="./assets/images/hero-sp.webp" />
-                <source media="(min-width: 768px)" type="image/png" srcset="./assets/images/hero.jpg" />
-                <source media="(max-width: 767px)" type="image/png" srcset="./assets/images/hero-sp.jpg" />
-                <img src="./assets/images/hero.jpg" alt="Hero image" />
-            </picture>
+            <div class="hero__image">
+                <img data-image="hero" src="" alt="Hero image" />
+            </div>
             <h1 class="hero__logo" data-svg="brand/brand-logo"></h1>
         </div>
 
@@ -228,32 +224,105 @@
             </section>
             <section class="section">
                 <h2 class="section__title title" data-icon="true" data-img="design">
-                    <span class="title__item">Selected Works</span>
+                    <span class="title__item">Recent Works</span>
                 </h2>
                 <div class="section__body">
-                    <div class="gallery-icon">
-                        <div class="gallery-icon__item">
-                            <span class="gallery__icon" data-svg="icons/design"></span>
+                    <p>
+                        Below are some examples of my recent work, including character designs for a game development project I started recently, postcard designs from the past, and links to some of
+                        the websites I have worked on.
+                    </p>
+                    <p>
+                        For more detailed information about my experience and projects, please visit my LinkedIn profile or feel free to contact me directly, and I will be happy to send you my resume.
+                    </p>
+                    <div class="category-icon">
+                        <div class="category-icon__item">
+                            <span class="category-icon__icon" data-svg="icons/design"></span>
                             <span>Direction</span>
                         </div>
-                        <div class="gallery-icon__item">
-                            <span class="gallery__icon" data-svg="icons/palette"></span>
+                        <div class="category-icon__item">
+                            <span class="category-icon__icon" data-svg="icons/palette"></span>
                             <span>Design</span>
                         </div>
-                        <div class="gallery-icon__item">
-                            <span class="gallery__icon" data-svg="icons/code"></span>
+                        <div class="category-icon__item">
+                            <span class="category-icon__icon" data-svg="icons/code"></span>
                             <span>Markup</span>
                         </div>
                     </div>
+                </div>
+                <div class="section__body">
                     <div class="gallery">
                         <div class="gallery__item">
-                            <img src="https://placehold.jp/608x342.png" alt="Project image" class="gallery__image" />
-                            <div class="gallery__caption">Lorem ipsum dolor sit amet</div>
-                            <div class="gallery__category">
-                                <span class="gallery__icon" data-svg="icons/design"></span>
-                                <span class="gallery__icon" data-svg="icons/palette"></span>
-                                <span class="gallery__icon" data-svg="icons/code"></span>
-                            </div>
+                            <a href="https://www.cri-mw.co.jp/" target="_blank" title="CRI middleware" rel="noopener noreferrer" class="gallery__link">
+                                <div class="gallery__image">
+                                    <img data-image="works/cri-mw" src="" alt="CRI middleware" />
+                                </div>
+                                <div class="gallery__caption">Website redesign</div>
+                                <div class="gallery__category">
+                                    <span class="category-icon__icon category-icon__icon--sm" data-svg="icons/design"></span>
+                                    <span class="category-icon__icon category-icon__icon--sm" data-svg="icons/palette"></span>
+                                    <span class="category-icon__icon category-icon__icon--sm" data-svg="icons/code"></span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="gallery__item">
+                            <a href="https://ninnaji.jp/" target="_blank" title="Ninnaji" rel="noopener noreferrer" class="gallery__link">
+                                <div class="gallery__image">
+                                    <img data-image="works/ninnaji" src="" alt="Ninnaji" />
+                                </div>
+                                <div class="gallery__caption">Website redesign</div>
+                                <div class="gallery__category">
+                                    <span class="category-icon__icon category-icon__icon--sm" data-svg="icons/design"></span>
+                                    <span class="category-icon__icon category-icon__icon--sm" data-svg="icons/palette"></span>
+                                    <span class="category-icon__icon category-icon__icon--sm" data-svg="icons/code"></span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="gallery__item">
+                            <a href="https://ninnaji.jp/en/" target="_blank" title="Ninnaji English" rel="noopener noreferrer" class="gallery__link">
+                                <div class="gallery__image">
+                                    <img data-image="works/ninnaji-en" src="" alt="Ninnaji English" />
+                                </div>
+                                <div class="gallery__caption">Website redesign</div>
+                                <div class="gallery__category">
+                                    <span class="category-icon__icon category-icon__icon--sm" data-svg="icons/palette"></span>
+                                    <span class="category-icon__icon category-icon__icon--sm" data-svg="icons/code"></span>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="gallery__item">
+                            <a href="./assets/images/works/neko-nook.jpg" target="_blank" title="Neko Nook" rel="noopener noreferrer" class="gallery__link">
+                                <div class="gallery__image">
+                                    <img data-image="works/neko-nook" src="" alt="Neko Nook" />
+                                    <p class="gallery__notice">Under development</p>
+                                </div>
+                                <div class="gallery__caption">Character design: PJ Neko Nook</div>
+                                <div class="gallery__category">
+                                    <span class="category-icon__icon category-icon__icon--sm" data-svg="icons/palette"></span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="gallery__item">
+                            <a href="./assets/images/works/post-card.jpg" target="_blank" title="Post card" rel="noopener noreferrer" class="gallery__link">
+                                <div class="gallery__image">
+                                    <img data-image="works/post-card" src="" alt="Post card" />
+                                </div>
+                                <div class="gallery__caption">Postcard design</div>
+                                <div class="gallery__category">
+                                    <span class="category-icon__icon category-icon__icon--sm" data-svg="icons/palette"></span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="gallery__item">
+                            <a href="./assets/images/works/personal.jpg" target="_blank" title="Personal illustration work" rel="noopener noreferrer" class="gallery__link">
+                                <div class="gallery__image">
+                                    <img data-image="works/personal" src="" alt="Personal illustration work" />
+                                </div>
+                                <div class="gallery__caption">Personal illustration work</div>
+                                <div class="gallery__category">
+                                    <span class="category-icon__icon category-icon__icon--sm" data-svg="icons/palette"></span>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -42,6 +42,47 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+// webp and sp
+document.addEventListener("DOMContentLoaded", function () {
+    const webpSupported = document.createElement("canvas").toDataURL("image/webp").indexOf("data:image/webp") === 0;
+    const windowWidth = window.innerWidth;
+    const images = document.querySelectorAll("[data-image]");
+    const basePath = "../assets/images/";
+    const imgExtensions = [".jpg", ".png"];
+
+    function setImageSrc(img, imageName, suffix, extension) {
+        img.src = `${basePath}${imageName}${suffix}${extension}`;
+    }
+
+    images.forEach(function (img) {
+        const imageName = img.dataset.image;
+        const suffix = windowWidth <= 767 ? "-sp" : "";
+
+        if (webpSupported) {
+            setImageSrc(img, imageName, suffix, ".webp");
+        } else {
+            let extensionIndex = 0;
+
+            function checkImageExists() {
+                const extension = imgExtensions[extensionIndex];
+                const tempImg = new Image();
+                tempImg.onload = function () {
+                    setImageSrc(img, imageName, suffix, extension);
+                };
+                tempImg.onerror = function () {
+                    extensionIndex++;
+                    if (extensionIndex < imgExtensions.length) {
+                        checkImageExists();
+                    }
+                };
+                tempImg.src = `${basePath}${imageName}${suffix}${extension}`;
+            }
+
+            checkImageExists();
+        }
+    });
+});
+
 // サブコンテンツの移動
 document.addEventListener("DOMContentLoaded", function () {
     const sidebar = document.querySelector(".sidebar");

@@ -9,9 +9,11 @@
     padding-right: calc(var.$sidebar + (var.$space-xl * 2));
     margin-top: var.$space-3xl;
     @include mixins.respond(tablet) {
+        background-color: rgba(clr.$black-rgb, 0.9);
         min-width: inherit;
         width: 100%;
         padding: var.$space-xs var.$space-md;
+        margin-top: 0;
     }
 }
 .copylight {
