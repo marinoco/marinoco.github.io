@@ -1,0 +1,101 @@
+@use "../base/colors" as clr;
+@use "../base/mixins" as mixins;
+@use "../base/variables" as var;
+
+.category-icon {
+    display: flex;
+    justify-content: flex-end;
+    gap: var.$space-md;
+    &__item {
+        font-size: var.$fz-xs;
+        text-transform: uppercase;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: var.$space-2xs;
+    }
+    &__icon {
+        color: clr.$background;
+        background-color: clr.$low-emphasis;
+        display: grid;
+        place-items: center;
+        width: var.$icon-lg;
+        height: var.$icon-lg;
+        border-radius: var.$icon-lg;
+        & svg {
+            width: var.$icon-md;
+            height: var.$icon-md;
+        }
+        &--sm {
+            width: var.$icon-md;
+            height: var.$icon-md;
+            border-radius: var.$icon-md;
+            & svg {
+                width: var.$icon-sm;
+                height: var.$icon-sm;
+            }
+        }
+    }
+}
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var.$fz-2xl 0;
+    &__item {
+        width: calc((100% / 2) - 16px);
+        @include mixins.respond(desktop) {
+            width: calc((100% / 3) - 16px);
+        }
+        @include mixins.respond(sp) {
+            width: 100%;
+        }
+    }
+    &__link {
+        text-decoration: none;
+        cursor: pointer;
+        color: clr.$mid-emphasis;
+        text-decoration: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        gap: var.$space-2xs;
+    }
+    &__image {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1.54 / 1;
+        border: solid 1px clr.$border;
+        overflow: hidden;
+        & img {
+            transition: all var.$speed-fast ease-in-out;
+        }
+        & .gallery__notice {
+            color: clr.$caution;
+            font-size: var.$fz-xs;
+            text-transform: uppercase;
+            position: absolute;
+            bottom: 0;
+            right: var.$space-2xs;
+        }
+    }
+    &__caption {
+        color: currentColor;
+    }
+    &__category {
+        display: flex;
+        justify-content: flex-end;
+        gap: var.$space-2xs;
+    }
+}
+.gallery__link:hover {
+    color: clr.$theme-color;
+    & .gallery__image {
+        & img {
+            transform: scale(1.1);
+            opacity: 0.8;
+        }
+    }
+}

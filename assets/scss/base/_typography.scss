@@ -1,0 +1,117 @@
+@use "colors" as clr;
+@use "variables" as var;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+body {
+    font-family: "Roboto", sans-serif;
+    color: clr.$mid-emphasis;
+    background-color: clr.$background;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    position: relative;
+    &__item {
+        flex-grow: 1;
+        display: block;
+        text-transform: uppercase;
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            z-index: -1;
+        }
+    }
+    &[data-icon="false"] {
+        & .title__item {
+            color: clr.$dark-mid-emphasis;
+            font-size: var.$fz-xl;
+            font-weight: bold;
+            line-height: var.$fz-2xl;
+            border-left: solid 12px clr.$dark-low-emphasis;
+            padding-left: var.$space-sm;
+            &::before {
+                background-color: clr.$dark-disable;
+                width: 100%;
+                height: 2px;
+                left: 0;
+            }
+        }
+    }
+
+    &[data-icon="true"] {
+        gap: var.$space-md;
+        & .title__item {
+            color: clr.$high-emphasis;
+            font-size: var.$fz-2xl;
+            font-weight: 900;
+            line-height: var.$icon-title;
+            letter-spacing: 0.1rem;
+            border-left: solid 4px clr.$background-reverse;
+            padding-left: var.$space-md;
+            &::before {
+                content: "";
+                display: block;
+                background-color: clr.$disable;
+                width: calc(100% - (var.$icon-title + 4px + var.$space-md + var.$space-md));
+                height: 2px;
+            }
+        }
+        & .title__icon {
+            flex-shrink: 1;
+            background-color: clr.$background-reverse;
+            border-radius: var.$icon-title;
+            width: var.$icon-title;
+            height: var.$icon-title;
+            &::before {
+                content: "";
+                display: block;
+                background-color: clr.$background;
+                width: var.$icon-title;
+                height: var.$icon-title;
+            }
+        }
+    }
+    &[data-img="marinoco"] {
+        & .title__icon {
+            &::before {
+                mask: url("../images/brand/brand-icon.svg") no-repeat center;
+            }
+        }
+    }
+    &[data-img="experience"] {
+        & .title__icon {
+            &::before {
+                mask: url("../images/icons/business.svg") no-repeat center;
+                mask-size: var.$icon-title-mask;
+            }
+        }
+    }
+    &[data-img="education"] {
+        & .title__icon {
+            &::before {
+                mask: url("../images/icons/education.svg") no-repeat center;
+                mask-size: var.$icon-title-mask;
+            }
+        }
+    }
+    &[data-img="skill"] {
+        & .title__icon {
+            &::before {
+                mask: url("../images/icons/design.svg") no-repeat center;
+                mask-size: var.$icon-title-mask;
+            }
+        }
+    }
+    &[data-img="design"] {
+        & .title__icon {
+            &::before {
+                mask: url("../images/icons/draw.svg") no-repeat center;
+                mask-size: var.$icon-title-mask;
+            }
+        }
+    }
+}

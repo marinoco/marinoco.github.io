@@ -1,0 +1,139 @@
+// 基本色
+:root {
+    --theme-color: #ff7518;
+    --theme-color-rgb: 255, 117, 24;
+
+    --monochrome-100: #1a1010;
+    --monochrome-100-rgb: 26, 16, 16;
+    --monochrome-90: #312828;
+    --monochrome-90-rgb: 49, 40, 40;
+    --monochrome-80: #48403f;
+    --monochrome-80-rgb: 72, 64, 63;
+    --monochrome-70: #5f5857;
+    --monochrome-70-rgb: 95, 88, 87;
+    --monochrome-60: #76706f;
+    --monochrome-60-rgb: 118, 112, 111;
+    --monochrome-50: #8c8887;
+    --monochrome-50-rgb: 140, 136, 135;
+    --monochrome-40: #a39f9f;
+    --monochrome-40-rgb: 163, 159, 159;
+    --monochrome-30: #bab7b7;
+    --monochrome-30-rgb: 186, 183, 183;
+    --monochrome-20: #d1cfcf;
+    --monochrome-20-rgb: 209, 207, 207;
+    --monochrome-10: #e8e7e7;
+    --monochrome-10-rgb: 232, 231, 231;
+    --monochrome-5: #f4f3f3;
+    --monochrome-5-rgb: 244, 243, 243;
+
+    @media (prefers-color-scheme: light) {
+        --high-emphasis: var(--monochrome-100);
+        --high-emphasis-rgb: var(--monochrome-100-rgb);
+        --mid-emphasis: var(--monochrome-80);
+        --mid-emphasis-rgb: var(--monochrome-80-rgb);
+        --low-emphasis: var(--monochrome-60);
+        --low-emphasis-rgb: var(--monochrome-60-rgb);
+        --disable: var(--monochrome-20);
+        --disable-rgb: var(--monochrome-20-rgb);
+        --border: var(--monochrome-70);
+        --border-rgb: var(--monochrome-70-rgb);
+        --accent-primary: var(--theme-color);
+        --accent-primary-rgb: var(--theme-color-rgb);
+        --accent-secondary: #007775;
+        --accent-secondary-rgb: 0, 119, 117;
+        --caution: #cf1137;
+        --caution-rgb: 207, 17, 55;
+        --foucus: #0c6dad;
+        --foucus-rgb: 12, 109, 173;
+        --background: var(--monochrome-5);
+        --background-rgb: var(--monochrome-5-rgb);
+        --background-reverse: var(--monochrome-90);
+        --background-reverse-rgb: var(--monochrome-90-rgb);
+        --surface-primary: #fdfdfd;
+        --surface-primary-rgb: 253, 253, 253;
+        --surface-secondary: var(--monochrome-5);
+        --surface-secondary-rgb: var(--monochrome-5-rgb);
+        --surface-tertiary: var(--monochrome-10);
+        --surface-tertiary-rgb: var(--monochrome-10-rgb);
+    }
+    @media (prefers-color-scheme: dark) {
+        --high-emphasis: var(--monochrome-5);
+        --high-emphasis-rgb: var(--monochrome-5-rgb);
+        --mid-emphasis: var(--monochrome-20);
+        --mid-emphasis-rgb: var(--monochrome-20-rgb);
+        --low-emphasis: var(--monochrome-30);
+        --low-emphasis-rgb: var(--monochrome-30-rgb);
+        --disable: var(--monochrome-70);
+        --disable-rgb: var(--monochrome-70-rgb);
+        --border: var(--monochrome-20);
+        --border-rgb: var(--monochrome-20-rgb);
+        --accent-primary: var(--color-theme);
+        --accent-primary-rgb: var(--color-theme-rgb);
+        --accent-secondary: #79c0c2;
+        --accent-secondary-rgb: 121, 192, 194;
+        --caution: #fc6775;
+        --caution-rgb: 252, 103, 117;
+        --foucus: #0c6dad;
+        --foucus-rgb: 12, 109, 173;
+        --background: var(--monochrome-90);
+        --background-rgb: var(--monochrome-90-rgb);
+        --background-reverse: var(--monochrome-5);
+        --background-reverse-rgb: var(--monochrome-5-rgb);
+        --surface-primary: var(--monochrome-100);
+        --surface-primary-rgb: var(--monochrome-100-rgb);
+        --surface-secondary: var(--monochrome-80);
+        --surface-secondary-rgb: var(--monochrome-80-rgb);
+        --surface-tertiary: var(--monochrome-70);
+        --surface-tertiary-rgb: var(--monochrome-70-rgb);
+    }
+}
+
+$theme-color: var(--theme-color);
+$theme-color-rgb: var(--theme-color-rgb);
+
+$white: var(--monochrome-5);
+$white-rgb: var(--monochrome-5-rgb);
+$black: var(--monochrome-100);
+$black-rgb: var(--monochrome-100-rgb);
+
+$high-emphasis: var(--high-emphasis);
+$high-emphasis-rgb: car(--high-emphasis-rgb);
+$mid-emphasis: var(--mid-emphasis);
+$mid-emphasis-rgb: var(--mid-emphasis-rgb);
+$low-emphasis: var(--low-emphasis);
+$low-emphasis-rgb: var(--low-emphasis-rgb);
+$disable: var(--disable);
+$disable-rgb: var(--disable-rgb);
+$border: var(--border);
+$border-rgb: var(--border-rgb);
+
+$dark-high-emphasis: var(--monochrome-5);
+$dark-high-emphasis-rgb: var(--monochrome-5-rgb);
+$dark-mid-emphasis: var(--monochrome-20);
+$dark-mid-emphasis-rgb: var(--monochrome-20-rgb);
+$dark-low-emphasis: var(--monochrome-30);
+$dark-low-emphasis-rgb: var(--monochrome-30-rgb);
+$dark-disable: var(--monochrome-70);
+$dark-disable-rgb: var(--monochrome-70-rgb);
+$dark-border: var(--monochrome-20);
+$dark-border-rgb: var(--monochrome-20-rgb);
+
+$accent-primary: var(--accent-primary);
+$accent-primary-rgb: var(--color-theme-rgb);
+$accent-secondary: var(--accent-secondary);
+$accent-secondary-rgb: var(--accent-secondary-rgb);
+$caution: var(--caution);
+$caution-rgb: var(--caution-rgb);
+$foucus: var(--foucus);
+$foucus-rgb: var(--foucus-rgb);
+
+$background: var(--background);
+$background-rgb: var(--background-rgb);
+$background-reverse: var(--background-reverse);
+$background-reverse-rgb: var(--background-reverse-rgb);
+$surface-primary: var(--surface-primary);
+$surface-primary-rgb: var(--surface-primary-rgb);
+$surface-secondary: var(--surface-secondary);
+$surface-secondary-rgb: var(--surface-secondary-rgb);
+$surface-tertiary: var(--surface-tertiary);
+$surface-tertiary-rgb: var(--surface-tertiary-rgb);

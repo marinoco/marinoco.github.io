@@ -1,0 +1,44 @@
+@use "../base/colors" as clr;
+@use "../base/variables" as var;
+@use "../base/mixins" as mixins;
+
+.overlay {
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(clr.$black-rgb, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    transition: opacity var.$speed-fast ease, visibility var.$speed-fast ease, transform var.$speed-fast ease;
+    transform: scale(0.8);
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+}
+
+.overlay__item {
+    max-width: 80%;
+    max-height: 80%;
+    transition: transform var.$speed-fast ease;
+    &.active {
+        transform: scale(1);
+    }
+}
+
+.overlay__close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    color: clr.$white;
+    font-size: var.$fz-2xl;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
