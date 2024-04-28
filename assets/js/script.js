@@ -90,10 +90,17 @@ function loadImages() {
         const imageName = img.dataset.src;
         const suffix = windowWidth <= 767 ? "-sp" : "";
 
-        if (webpSupported) {
-            setImageSrc(img, imageName, suffix, ".webp");
+        if (img.parentElement.classList.contains("hero__image")) {
+            // Hero imageの場合
+            img.src = `${basePath}${imageName}${suffix}${webpSupported ? ".webp" : ".jpg"}`;
+            img.removeAttribute("data-src");
         } else {
-            checkImageExists(img, imageName, suffix);
+            // その他の画像の場合
+            if (webpSupported) {
+                setImageSrc(img, imageName, suffix, ".webp");
+            } else {
+                checkImageExists(img, imageName, suffix);
+            }
         }
     });
 }
