@@ -1,9 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
     var preloadImages = [
-        "../assets/images/hero.jpg",
-        "../assets/images/hero-sp.jpg",
-        "../assets/images/hero.webp",
-        "../assets/images/hero-sp.webp",
         "../assets/images/works/cri-mw.jpg",
         "../assets/images/works/cri-mw-sp.jpg",
         "../assets/images/works/cri-mw.webp",
